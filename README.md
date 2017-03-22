@@ -29,6 +29,7 @@ To satisfy these user stories, we will create a site that makes a request to the
 
 ## Architecture
 
+![architecture](https://cloud.githubusercontent.com/assets/20152018/24198216/e2945094-0efc-11e7-80ac-5f1cf8b6f898.png)
 
 ### Stretch goals
 
