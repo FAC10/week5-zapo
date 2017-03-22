@@ -3,9 +3,8 @@ const createDates = require('./createDates');
 
 const request = require('request');
 
-const resultsArr = [];
-
 function requests(datesArr, cb) {
+  const resultsArr = [];
   datesArr.forEach((date) => {
     const url = `https://content.guardianapis.com/search?tag=tone/obituaries&from-date=${date}&order-by=newest&api-key=${process.env.SECRET}&show-fields=trailText`;
     request(url, (err, res, body) => {
