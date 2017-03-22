@@ -1,5 +1,4 @@
 require('env2')('.env');
-console.log(process.env.SECRET);
 
 const request = require('request');
 
@@ -30,7 +29,7 @@ let obj = {};
 
 function requests() {
 datesArr.forEach((date => {
-let url = `https://content.guardianapis.com/search?tag=tone/obituaries&from-date=${date}&order-by=newest&api-key=${apikey}`;
+let url = `https://content.guardianapis.com/search?tag=tone/obituaries&from-date=${date}&order-by=newest&api-key=${process.env.SECRET}`;
 request(url, (err, res, body) => {
   obj.push(body);
 });
