@@ -1,28 +1,7 @@
 require('env2')('.env');
+var createDates = require('./createDates');
 
 const request = require('request');
-
-function createDatesArr() {
-  const today = new Date();
-  const dd = today.getDate();
-  const mm = today.getMonth() + 1;
-  const yyyy = today.getFullYear();
-
-  if (dd.length < 2) {
-      dd = `0${dd}`;
-  }
-
-  if (mm.length < 2) {
-      mm = `0${mm}`;
-  }
-
-  let datesArr = [];
-    for (i = 0; i < 10; i++) {
-        let year = yyyy - i;
-        let date = `${year}-${mm}-${dd}`;
-        datesArr.push(date);
-    }
-}
 
 let resultsArr = [];
 
