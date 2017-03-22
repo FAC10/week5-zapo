@@ -1,3 +1,6 @@
+require('env2')('.env');
+console.log(process.env.SECRET);
+
 const request = require('request');
 
 const today = new Date();
