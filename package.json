@@ -4,6 +4,7 @@
   "description": "webapp to show deaths on the current day in the past 10 years",
   "main": "index.js",
   "scripts": {
+    "start": "node src/server.js",
     "test": "tape tests/*.js | faucet",
     "coverage": "istanbul cover tests/*.js"
   },
