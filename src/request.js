@@ -13,10 +13,23 @@ if (mm.length < 2) {
   mm = `0${mm}`;
 }
 
-const date = `${yyyy}-${mm}-${dd}`;
+let datesArr = [];
 
-const url = `https://content.guardianapis.com/search?tag=tone/obituaries&from-date=${date}&order-by=newest&api-key=${apikey}`;
+function createDatesArr() {
+  for (i = 0; i < 10; i++) {
+    let year = yyyy - i;
+    let date = `${year}-${mm}-${dd}`;
+    datesArr.push(date);
+  }
+}
 
+let obj = {};
+
+function requests() {
+datesArr.forEach((date => {
+let url = `https://content.guardianapis.com/search?tag=tone/obituaries&from-date=${date}&order-by=newest&api-key=${apikey}`;
 request(url, (err, res, body) => {
-  console.log(body);
+  obj.push(body);
 });
+})
+}
