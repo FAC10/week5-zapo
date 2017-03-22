@@ -6,7 +6,7 @@
 
 - [ ] I want to be able to use the app with my keyboard
 
-- [ ]I want to be able to use the app with a screen reader
+- [ ] I want to be able to use the app with a screen reader
 
 ### Product
 
