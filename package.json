@@ -4,7 +4,8 @@
   "description": "webapp to show deaths on the current day in the past 10 years",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape tests/*.js | faucet",
+    "coverage": "istanbul cover tests/*.js"
   },
   "repository": {
     "type": "git",
@@ -17,12 +18,16 @@
   },
   "homepage": "https://github.com/FAC10/week5-zapo#readme",
   "devDependencies": {
+    "codecov": "^2.1.0",
     "eslint": "^3.18.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
-    "nodemon": "^1.11.0"
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.11.0",
+    "shot": "^3.4.0",
+    "tape": "^4.6.3"
   },
   "dependencies": {
     "request": "^2.81.0"
