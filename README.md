@@ -1,5 +1,8 @@
 # Die Another Day :trollface: :skull: (another Zapo project)
 
+[![Build Status](https://travis-ci.org/FAC10/week5-zapo.svg?branch=master)](https://travis-ci.org/FAC10/week5-zapo)
+[![Code Coverage](https://codecov.io/gh/FAC10/week5-zapo/branch/master/graph/badge.svg)](https://codecov.io/gh/FAC10/week5-zapo)
+
 ### User stories
 
 - [ ] I want to be able to see an obituary from this day each year (back to 1999)
