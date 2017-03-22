@@ -3,7 +3,7 @@ const createDates = require('./createDates');
 
 const request = require('request');
 
-function requests(datesArr, cb) {
+function getObits(datesArr, cb) {
   const resultsArr = [];
   datesArr.forEach((date) => {
     const url = `https://content.guardianapis.com/search?tag=tone/obituaries&from-date=${date}&order-by=newest&api-key=${process.env.SECRET}&show-fields=trailText`;
@@ -20,3 +20,5 @@ function requests(datesArr, cb) {
     });
   });
 }
+
+module.exports = getObits;
