@@ -1,4 +1,4 @@
-# Die another day :trollface: (another Zapo project)
+# Die Another Day :trollface: :skull: (another Zapo project)
 
 ### User stories
 
