@@ -1,0 +1,30 @@
+{
+  "name": "die-another-day",
+  "version": "1.0.0",
+  "description": "webapp to show deaths on the current day in the past 10 years",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAC10/week5-zapo.git"
+  },
+  "author": "zapo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FAC10/week5-zapo/issues"
+  },
+  "homepage": "https://github.com/FAC10/week5-zapo#readme",
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
