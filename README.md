@@ -8,6 +8,10 @@
 
 - [ ]I want to be able to use the app with a screen reader
 
+### Product
+
+To satisfy these user stories, we will create a site that makes a request to the Guardian API to find an obituary posted on today's date each year. As a stretch goal we will allow users to check for obituaries posted on other days. We will stick to obituaries posted during the last 10 years as the Guardian API only allows 12 requests a second.
+
 ### Specs
 
 - [ ] Use at least 1 API
@@ -22,6 +26,8 @@
 - [ ] Use CodeCov or a similar tool for test coverage.
 - [ ] Display continuous integration and code coverage badges on your project README.
 - [ ] Ensure that errors are handled, if for example a user attempts to make a request to a non-existent route to your server, provide the user with a custom response.
+
+## Architecture
 
 
 ### Stretch goals
