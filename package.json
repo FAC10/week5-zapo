@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FAC10/week5-zapo.git"
+    "url": "git+https://github.com/oliverjam/week5-zapo"
   },
   "author": "zapo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FAC10/week5-zapo/issues"
+    "url": "https://github.com/oliverjam/week5-zapo/issues"
   },
-  "homepage": "https://github.com/FAC10/week5-zapo#readme",
+  "homepage": "https://github.com/oliverjam/week5-zapo#readme",
   "devDependencies": {
     "codecov": "^2.1.0",
     "eslint": "^3.18.0",
