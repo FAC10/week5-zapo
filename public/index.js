@@ -3,7 +3,7 @@ var fakeData = [
     {
         title: 'Diana Wallace obituary',
         url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
+        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
     }, {
         title: 'Diana Wallace obituary',
         url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
@@ -45,15 +45,15 @@ var fakeData = [
 
 function updateDOM(dataArr) {
   dataArr.forEach(function(obit) {
-    var container = createEl('div', 'obit', null, null);
-    var link = createEl('a', 'obit__link', null, obit.url);
+    // var container = createEl('div', 'obit', null, null);
+    var link = createEl('a', 'obit', null, obit.url);
     var title = createEl('h2', 'obit__title', obit.title);
     var summary = createEl('p', 'obit__summary', obit.summary);
     link.appendChild(title);
-    container.appendChild(link);
-    container.appendChild(summary);
+    link.appendChild(summary);
+    // container.appendChild(link);
     var app = document.getElementById('app');
-    app.appendChild(container);
+    app.appendChild(link);
   })
 }
 
