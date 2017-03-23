@@ -1,22 +1,26 @@
 require('env2')('.env');
-var createDates = require('./createDates');
+const createDates = require('./createDates');
 
 const request = require('request');
 
-let resultsArr = [];
+function getObits(datesArr, cb) {
+  const resultsArr = [];
+  datesArr.forEach((date) => {
+    const url = `https://content.guardianapis.com/search?tag=tone/obituaries&to-date=${date}&order-by=newest&api-key=${process.env.SECRET}&show-fields=trailText`;
+    request(url, (err, res, body) => {
+      // I thought Request provided JSON automatically but apparently not
+      const data = JSON.parse(body).response;
+      const obj = {
+        title: data.results[0].webTitle,
+        url: data.results[0].webUrl,
+        summary: data.results[0].fields.trailText,
+      };
+      resultsArr.push(obj);
+      if (resultsArr.length === datesArr.length) {
+        cb(resultsArr);
+      }
+    });
+  });
+}
 
-function requests(datesArr, cb) {
-    datesArr.forEach((date => {
-            let url = `https://content.guardianapis.com/search?tag=tone/obituaries&from-date=${date}&order-by=newest&api-key=${process.env.SECRET}&show-fields=trailText`;
-            request(url, (err, res, body) => {
-              let title = res.results[0].webTitle;
-              let url = res.results[0].webUrl;
-              let summary = res.results[0].fields.trailText;
-              const obj = {title, url, summary};
-              resultsArr.push(obj);
-              if(resultsArr.length === datesArr.length) {
-                cb(resultsArr);
-              }
-            });
-        })
-    }
+module.exports = getObits;
