@@ -4,8 +4,10 @@ function updateDOM(dataArr) {
     var link = createEl('a', 'obit', null, obit.url);
     var title = createEl('h2', 'obit__title', obit.title);
     var summary = createEl('p', 'obit__summary', obit.summary);
+    var date = createEl('p', 'obit__date', obit.date);
     link.appendChild(title);
     link.appendChild(summary);
+    link.appendChild(date);
     // container.appendChild(link);
     var app = document.getElementById('app');
     app.appendChild(link);
