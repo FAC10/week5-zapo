@@ -33,6 +33,7 @@ handlers.servePublic = (request, response, url) => {
         js: 'application/javascript',
         ico: 'image/x-icon',
         png: 'image/png',
+        svg: 'image/svg+xml',
       };
       response.writeHead(200, { 'Content-Type': extensionType[extension] });
       response.end(file);

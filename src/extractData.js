@@ -8,8 +8,9 @@ function extractData(body) {
   return {
     title: body.response.results[0].webTitle,
     url: body.response.results[0].webUrl,
-    summary: body.response.results[0].fields.trailText,
+    summary: body.response.results[0].fields.trailText.replace(/<(?:.|\n)*?>/gm, ''),
     date: body.response.results[0].webPublicationDate.slice(0, 10),
+
   };
 }
 
