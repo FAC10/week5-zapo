@@ -1,48 +1,4 @@
 /* eslint-disable */
-var fakeData = [
-    {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }, {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }, {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }, {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }, {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }, {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }, {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }, {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }, {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }, {
-        title: 'Diana Wallace obituary',
-        url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-        summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith'
-    }
-];
-
 function updateDOM(dataArr) {
   dataArr.forEach(function(obit) {
     var link = createEl('a', 'obit', null, obit.url);
@@ -55,8 +11,6 @@ function updateDOM(dataArr) {
     app.appendChild(link);
   })
 }
-
-// updateDOM(fakeData);
 
 function createEl(element, className, text, url) {
   var el = document.createElement(element);
@@ -80,15 +34,6 @@ function fetch(method, url, responseCallback) {
     }
     request.open(method, url, true);
     request.send();
-}
-
-
-function myFunction(err, data){
-  if(err){
-    console.log(err);
-  } else {
-    console.log(data);
-  }
 }
 
 fetch('GET', 'http://localhost:4000/api', updateDOM);
