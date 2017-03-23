@@ -1,7 +1,6 @@
 const test = require('tape');
 const shot = require('shot');
 const router = require('../src/routers/router');
-// const handler = require('../src/handlers/handler');
 
 const routerTests = () => {
   test('test serve landing without error', (t) => {
@@ -51,6 +50,13 @@ const routerTests = () => {
     shot.inject(router, { method: 'get', url: 'assets/skull-and-crossbones-_1_.png' }, (response) => {
       t.equal(response.statusCode, 200, 'Should respond with status code of 200');
       t.equal(response.headers['Content-Type'], 'image/png', 'response Content-Type should be image/png');
+      t.end();
+    });
+  });
+  test('Test unknown urls give 404 and give a message of unknown url', (t) => {
+    shot.inject(router, { method: 'get', url: '/anything' }, (response) => {
+      t.equal(response.statusCode, 404, 'should respond with status code of 404');
+      t.equal(response.payload, '<h1>404 Page requested cannot be found</h1>', 'response should contain unkown url');
       t.end();
     });
   });
