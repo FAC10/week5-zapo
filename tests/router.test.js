@@ -36,7 +36,21 @@ const routerTests = () => {
   test('test servePublic with js', (t) => {
     shot.inject(router, { method: 'get', url: 'index.js' }, (response) => {
       t.equal(response.statusCode, 200, 'Should respond with status code of 200');
-      t.equal(response.headers['Content-Type'], 'application/js', 'response Content-Type should be application/js');
+      t.equal(response.headers['Content-Type'], 'application/javascript', 'response Content-Type should be application/javascript');
+      t.end();
+    });
+  });
+  test('test servePublic with ico', (t) => {
+    shot.inject(router, { method: 'get', url: 'assets/skull.ico' }, (response) => {
+      t.equal(response.statusCode, 200, 'Should respond with status code of 200');
+      t.equal(response.headers['Content-Type'], 'image/x-icon', 'response Content-Type should be image/x-icon');
+      t.end();
+    });
+  });
+  test('test servePublic with png', (t) => {
+    shot.inject(router, { method: 'get', url: 'assets/skull-and-crossbones-_1_.png' }, (response) => {
+      t.equal(response.statusCode, 200, 'Should respond with status code of 200');
+      t.equal(response.headers['Content-Type'], 'image/png', 'response Content-Type should be image/png');
       t.end();
     });
   });
