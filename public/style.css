@@ -3,6 +3,17 @@
 /*dark beige #A09080*/
 /*cream #EBE7D4*/
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body, p, h1, h2, h3 {
   margin: 0;
 }
@@ -47,11 +58,6 @@ body {
   margin-bottom: 1em;
 }
 
-.obit:hover {
-  transform: scale(1.025);
-  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.4);
-}
-
 .container {
   max-width: 60em;
   margin: 0 auto;
@@ -62,5 +68,30 @@ body {
   color: #BA9167;
   font-family: 'Carrois Gothic SC';
   text-decoration: none;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
+}
+
+@media (min-width: 54em) {
+  body {
+    font-size: 1.125em;
+  }
+
+  .flex-container {
+    margin-left: -1em;
+    margin-bottom: -1em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .obit {
+    flex: 0 0 calc(50% - 1em);
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+
+  .obit:hover,
+  .obit:focus {
+    transform: scale(1.025);
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.4);
+  }
 }
