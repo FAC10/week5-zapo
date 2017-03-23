@@ -36,4 +36,4 @@ function fetch(method, url, responseCallback) {
     request.send();
 }
 
-fetch('GET', 'http://localhost:4000/api', updateDOM);
+fetch('GET', 'https://frozen-caverns-62155.herokuapp.com/api', updateDOM);
