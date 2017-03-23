@@ -1,5 +1,4 @@
 const test = require('tape');
-const a = require('../index');
 
 
 test('Testing the test', (t) => {
@@ -8,3 +7,4 @@ test('Testing the test', (t) => {
 });
 
 require('./createDates.test.js')();
+// require('./extractData.test.js')();
