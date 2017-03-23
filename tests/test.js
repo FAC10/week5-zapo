@@ -9,3 +9,4 @@ test('Testing the test', (t) => {
 require('./createDates.test.js')();
 require('./router.test.js')();
 require('./extractData.test.js')();
+require('./getObits.test.js')();

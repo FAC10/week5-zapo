@@ -8,11 +8,14 @@ function getObits(datesArr, cb) {
   datesArr.forEach((date) => {
     const url = `https://content.guardianapis.com/search?tag=tone/obituaries&to-date=${date}&order-by=newest&api-key=${process.env.SECRET}&show-fields=trailText`;
     request(url, (err, res, body) => {
+      if (err) {
+        cb(err);
+      }
       // I thought Request provided JSON automatically but apparently not
       const data = extractData(JSON.parse(body));
       resultsArr.push(data);
       if (resultsArr.length === datesArr.length) {
-        cb(resultsArr);
+        cb(null, resultsArr);
       }
     });
   });
