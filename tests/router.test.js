@@ -60,6 +60,13 @@ const routerTests = () => {
       t.end();
     });
   });
+  test('Test servePublic with error', (t) => {
+    shot.inject(router, { method: 'get', url: '/hello.css' }, (response) => {
+      t.equal(response.statusCode, 500, 'should respond with status code of 500');
+      t.equal(response.payload.split(' ')[0], '<h1>500', 'response should start with <h1>500');
+      t.end();
+    });
+  });
 };
 
 module.exports = routerTests;
