@@ -9,6 +9,7 @@ function extractData(body) {
     title: body.response.results[0].webTitle,
     url: body.response.results[0].webUrl,
     summary: body.response.results[0].fields.trailText,
+    date: body.response.results[0].webPublicationDate.slice(0, 10),
   };
 }
 

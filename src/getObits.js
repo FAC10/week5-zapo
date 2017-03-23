@@ -15,6 +15,7 @@ function getObits(datesArr, cb) {
       const data = extractData(JSON.parse(body));
       resultsArr.push(data);
       if (resultsArr.length === datesArr.length) {
+        resultsArr.sort((a, b) => b.date.slice(0, 4) - a.date.slice(0, 4));
         cb(null, resultsArr);
       }
     });

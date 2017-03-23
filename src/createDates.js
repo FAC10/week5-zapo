@@ -30,7 +30,7 @@ function createDate(date) {
 
 function createDateArr(ISOdate) {
   const arr = [];
-  while (arr.length < 11) {
+  while (arr.length < 10) {
     const newYear = Number(ISOdate.substring(0, 4)) - arr.length;
     arr.push(newYear + ISOdate.substring(4, ISOdate.length));
   }
