@@ -7,4 +7,4 @@ test('Testing the test', (t) => {
 });
 
 require('./createDates.test.js')();
-// require('./extractData.test.js')();
+require('./extractData.test.js')();

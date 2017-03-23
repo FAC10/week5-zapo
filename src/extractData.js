@@ -1,8 +1,8 @@
 function extractData(body) {
   if (!body.response ||
-      !body.response.results.webTitle ||
-      !body.response.results.webUrl ||
-      !body.response.results.fields.trailText) {
+      !body.response.results[0].webTitle ||
+      !body.response.results[0].webUrl ||
+      !body.response.results[0].fields.trailText) {
     return body;
   }
   return {
