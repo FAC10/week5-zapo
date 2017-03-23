@@ -33,7 +33,7 @@ const extractDataTests = () => {
     const expected = {
       title: 'Diana Wallace obituary',
       url: 'https://www.theguardian.com/education/2017/mar/22/diana-wallace-obituary',
-      summary: '<strong>Other lives: </strong>Social worker who was guided by her Christian faith',
+      summary: 'Other lives: Social worker who was guided by her Christian faith',
     };
     const actual = extractData(fakeBody);
     t.ok(typeof actual === 'object', 'Should return an object');
