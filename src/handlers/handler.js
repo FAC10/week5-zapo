@@ -1,5 +1,7 @@
 const path = require('path');
 const fs = require('fs');
+const getObits = require('../getObits.js');
+const createDates = require('../createDates.js');
 // const handleAPI = require(./handleAPI); //TBC
 
 const handlers = module.exports = {};
@@ -44,7 +46,15 @@ handlers.pageNotFound = function (request, response) {
   response.end();
 };
 
-// handlers.serveAPI = function (request, response) {
-//   response.writeHead(200, { 'Content-Type': 'application/json', 'access-control-allow-origin': '*' });
-//   response.end(JSON.stringify(handleAPI(request.url)));
-// };
+handlers.serveAPI = function (request, response) {
+  const datesArr = createDates.createDateArr(createDates.createDate(createDates.myDate));
+  getObits(datesArr, (err, res) => {
+    if (err) {
+      // if error send 500 error to browser
+      return err;
+    }
+    // console.log(res);
+    response.writeHead(200, { 'Content-Type': 'application/json', 'access-control-allow-origin': '*' });
+    response.end(JSON.stringify(res));
+  });
+};
