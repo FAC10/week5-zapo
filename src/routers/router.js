@@ -6,7 +6,7 @@ module.exports = function (request, response) {
   if (url === '/') {
     handlers.serveLanding(request, response);
   } else if (extension === 'css' || extension === 'js' || extension === 'html' || extension === 'ico' || extension === 'png') {
-    handlers.servePublic(request, response);
+    handlers.servePublic(request, response, url);
   } else if (url.indexOf('INSERTAPIURLHERE') !== -1) { // TBC
     handlers.serveAPI(request, response);
   } else {
