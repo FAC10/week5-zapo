@@ -34,6 +34,9 @@ body {
 .obit {
   background-color: #262223;
   padding: 1em;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 .obit:not(:last-child){
   margin-bottom: 1em;
@@ -45,6 +48,9 @@ body {
   padding: 1em;
 }
 
-.obit__link {
+.obit__title {
   color: #BA9167;
+  font-family: 'Carrois Gothic SC';
+  text-decoration: none;
+  margin-bottom: 0.5em;
 }
