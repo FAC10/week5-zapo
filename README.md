@@ -1,3 +1,5 @@
+# [If you are code reviewing us please go to this link, this fork of the repo is behind!](https://github.com/oliverjam/week5-zapo)
+
 # Die Another Day :trollface: :skull: (another Zapo project)
 
 [![Build Status](https://travis-ci.org/FAC10/week5-zapo.svg?branch=master)](https://travis-ci.org/FAC10/week5-zapo)
