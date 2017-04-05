@@ -2,8 +2,8 @@
 
 # Die Another Day :trollface: :skull: (another Zapo project)
 
-[![Build Status](https://travis-ci.org/FAC10/week5-zapo.svg?branch=master)](https://travis-ci.org/FAC10/week5-zapo)
-[![Code Coverage](https://codecov.io/gh/FAC10/week5-zapo/branch/master/graph/badge.svg)](https://codecov.io/gh/FAC10/week5-zapo)
+[![Build Status](https://travis-ci.org/oliverjam/week5-zapo.svg?branch=master)](https://travis-ci.org/oliverjam/week5-zapo)
+[![codecov](https://codecov.io/gh/oliverjam/week5-zapo/branch/master/graph/badge.svg)](https://codecov.io/gh/oliverjam/week5-zapo)
 
 ### User stories
 
